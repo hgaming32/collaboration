@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Product Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Product Showcase</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <div class="hero">
+                <h2>Welcome to Our Store</h2>
+                <p>Discover our exclusive range of products.</p>
+                <button onclick="scrollToSection('products')">Explore Products</button>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card" onclick="openModal('Product 1', 'product1.jpg')">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3>Product 1</h3>
+                </div>
+                <div class="product-card" onclick="openModal('Product 2', 'product2.jpg')">
+                    <img src="product2.jpg" alt="Product 2">
+                    <h3>Product 2</h3>
+                </div>
+                <div class="product-card" onclick="openModal('Product 3', 'product3.jpg')">
+                    <img src="product3.jpg" alt="Product 3">
+                    <h3>Product 3</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Interactive Product Showcase. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
