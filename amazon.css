@@ -91,7 +91,9 @@ img {
     margin: 4%;
    list-style-type: none;
    display: flex;
+   
    padding-left: 35%;
+   
     
  }
 
@@ -100,6 +102,11 @@ img {
     padding-left: 1.5%;
     margin-right: 5.5px;
          
+ }
+
+ a {
+
+   font-weight: 400;
  }
 
 
